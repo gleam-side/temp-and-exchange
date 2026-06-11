@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator and Converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <article>
+    <h2>Currency Exchange Calculator</h2>
+    <section>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Insert Amount">
+
+        <label for="from-currency">From</label>
+        <select id="from-currency">
+            <option value="php">Philippine Peso (PHP)</option>
+            <option value="usd">United States Dollar (USD)</option>
+            <option value="eur">Euro (EUR)</option>
+        </select>
+
+        <label for="to-currency">To</label>
+        <select id="to-currency">
+            <option value="usd">United States Dollar (USD)</option>
+            <option value="php">Philippine Peso (PHP)</option>
+            <option value="eur">Euro (EUR)</option>
+        </select>
+
+        <button type="button" onclick="conversion()">Convert Value</button><br>
+        <p id="finalresult"></p>
+    </section>
+</article>
+    <article>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input id="celsius" type="number" placeholder="Enter temperature" step="1">
+        <select id="temp-direction">
+            <option value="ctof">Celsius to Fahrenheit</option>
+            <option value="ftoc">Fahrenheit to Celsius</option>
+        </select>
+        <button onclick="convertTemperature()">Convert Temperature</button>
+        <p id="farenheit"></p>
+    </div>
+</article>
+</body>
+</html>
