@@ -10,51 +10,76 @@
 <body>
 
     <nav>
+        <div class="nav-brand">‎ </div>
         <ul class="nav-links">
             <li><a href="#currency">Currency</a></li>
             <li><a href="#temperature">Temperature</a></li>
         </ul>
     </nav>
 
-    <article>
-    <h1>Currency Exchange Calculator</h1>
-    <section>
-        <label for="amount">Amount</label>
-        <input type="number" id="amount" placeholder="Insert Amount">
+    <main>
 
-        <label for="from-currency">From</label>
-        <select id="from-currency">
-            <option value="php">Philippine Peso (PHP)</option>
-            <option value="usd">United States Dollar (USD)</option>
-            <option value="eur">Euro (EUR)</option>
-        </select>
+        <article id="currency">
+            <h2>Currency Exchange Calculator</h2>
+            <section>
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Insert Amount">
 
-        <label for="to-currency">To</label>
-        <select id="to-currency">
-            <option value="usd">United States Dollar (USD)</option>
-            <option value="php">Philippine Peso (PHP)</option>
-            <option value="eur">Euro (EUR)</option>
-        </select>
+                <div class="row2">
+                    <div>
+                        <label for="from-currency">From</label>
+                        <select id="from-currency">
+                            <option value="php">Philippine Peso (PHP)</option>
+                            <option value="usd">United States Dollar (USD)</option>
+                            <option value="eur">Euro (EUR)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="to-currency">To</label>
+                        <select id="to-currency">
+                            <option value="usd">United States Dollar (USD)</option>
+                            <option value="php">Philippine Peso (PHP)</option>
+                            <option value="eur">Euro (EUR)</option>
+                        </select>
+                    </div>
+                </div>
 
-        <button type="button" onclick="conversion()">Convert Value</button><br>
-        <p id="finalresult"></p>
-    </section>
-</article>
-    <article>
-    <div class="container">
-        <h1>Temperature Converter</h1>
-        <input id="celsius" type="number" placeholder="Enter temperature" step="1">
-        <select id="temp-direction">
-            <option value="ctof">Celsius to Fahrenheit</option>
-            <option value="ftoc">Fahrenheit to Celsius</option>
-        </select>
-        <button onclick="convertTemperature()">Convert Temperature</button>
-        <p id="farenheit"></p>
-    </div>
-</article>
- <footer>
-        <p>&copy; 2025 Calculator and Conversion.</p>
+                <button type="button" onclick="conversion()">Convert Value</button>
+
+                <div class="result-tab">
+                    <span class="result-tab-label">Result</span>
+                    <p id="finalresult">—</p>
+                </div>
+            </section>
+        </article>
+
+        <article id="temperature">
+            <div class="container">
+                <h1>Temperature Converter</h1>
+                <label for="celsius">Enter temperature</label>
+                <input id="celsius" type="number" placeholder="Enter temperature" step="1">
+
+                <label for="temp-direction">Conversion</label>
+                <select id="temp-direction">
+                    <option value="ctof">Celsius to Fahrenheit</option>
+                    <option value="ftoc">Fahrenheit to Celsius</option>
+                </select>
+
+                <button onclick="convertTemperature()">Convert Temperature</button>
+
+                <div class="result-tab">
+                    <span class="result-tab-label">Result</span>
+                    <p id="farenheit">—</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Calculator and Converter.</p>
         <p>Currency rates are approximate and for reference only.</p>
     </footer>
+
 </body>
 </html>
